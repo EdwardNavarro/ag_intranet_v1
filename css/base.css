@@ -1,0 +1,37 @@
+/* ------------------- General Styles ------------------- */
+body { background: #FFF; }
+
+
+/* ------------------- Page Wrapper Styles ------------------- */
+
+
+
+/* ------------------- Content Wrapper Styles ------------------- */
+
+
+
+/* ------------------- Top Navigation Styles ------------------- */
+#top_nav_wrap { position: relative; width:100%; background: #06C; border-bottom: 3px solid #004a99; }
+	#top_nav_group { margin: 0 auto; width: 1140px; color: #FFF; font-size: 13px; /*padding: 5px;*/ overflow: hidden; }
+		#top_nav_left { float: left; width: 40%; text-align: left; }
+			#menu_container #top_nav_menu { list-style: none; margin: 0; padding: 0; }
+				#menu_container #top_nav_menu li { display: inline-block; float: left; border-right: 1px solid #004a99; line-height: 30px; }
+					#menu_container #top_nav_menu li:first-child { border-left: 1px solid #004a99; }
+				#menu_container #top_nav_menu li a { color: #FFF; text-decoration: none; display: block; padding: 0 10px; }
+				#menu_container #top_nav_menu li a:hover { color: #EEE; text-decoration: underline; background: #004a99; }
+		#top_nav_right { float: right; width: 55%; text-align: right; }
+			#top_nav_tools { list-style: none; margin: 0; padding: 0; width: auto; float: right; }
+				#top_nav_tools li { float: left; line-height: 30px; margin-right: 10px; }
+					#top_nav_tools li .dateinfo { display: none; }
+					#top_nav_tools li .notifications { display: block; background: #F00; color: #FFF; font-size: 11px; }
+
+/* ------------------- Home content posts ------------------- */
+#home-posts .post h3.post-title { margin: 0; line-height: 1.4; }
+	#home-posts .post .post-data { color: #999; font-size: 0.850em; }
+		#home-posts .post .post-data .post-date { color: #0099CC; }
+		#home-posts .post .post-data .post-author { font-style: italic; }
+
+/* ------------------- Sidebars and Widgets ------------------- */
+.widget { margin-bottom: 5px; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #EFEFEF;}
+	.widget-wrap { padding: 0 10px; }
+	.widget .widget-title { line-height: 18px; font-family: "OpenSansLight"; margin: 0 0 15px 0; padding: 6px 14px 6px 14px; background-color: rgb(248,248,248); font-size: 16px; }
