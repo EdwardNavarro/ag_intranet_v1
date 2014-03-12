@@ -103,7 +103,7 @@
 					<ul class='nav pull-left'>
 						<li class='active'><a href="/"><i class='icon-white icon-home'></i> Inicio</a></li>
 						<!-- <li><a href="#"><i class='icon-white icon-user'></i> Account</a></li> -->
-						<li><a href="#"><i class='icon-white icon-tasks'></i> Tareas</a></li>
+						<li><a href="/tareas"><i class='icon-white icon-tasks'></i> Tareas</a></li>
 						<!-- <li class="dropdown">
 		    				<a href="#" class="dropdown-toggle" data-toggle="dropdown"> 
 		    					<i class='icon-white icon-star'></i> Features <b class="caret"></b>
@@ -144,14 +144,45 @@
 					<ul>
 						<li class="active"><a href="/"><figure><i class='icon-home'></i> Inicio <!-- &nbsp;&nbsp;<span class='badge badge-warning'>2</span> --></figure></a></li>
 						<hr/>
-						<li><a href="/actividad"><figure><i class="icon-th-list"></i> Actividad</figure></a></li>
-						<li><a href="/grupos"><figure><i class="icon-group"></i> Grupos</figure></a></li>
-						<li><a href="/miembros"><figure><i class="icon-plus-sign-alt"></i> Miembros</figure></a></li>
-						<li><a href="/foros"><figure><i class="icon-bullhorn"></i> Foros</figure></a></li>
+						<li class='dropper'>
+							<figure><i class='icon-circle-arrow-down'></i> Organización AG &nbsp;›</figure>
+							<ul class='subSide'>
+								<li><a href="/corporativo">Acerca de Nosotros</a></li>
+								<li><a href="/corporativo">Dr. Alan González</a></li>
+								<li><a href="/corporativo">Comrpomiso Social</a></li>
+							</ul>
+						</li>
+						<li class='dropper'>
+							<figure><i class='icon-circle-arrow-down'></i> Departamentos &nbsp;›</figure>
+							<ul class='subSide'>
+								<li><a href="/departamentos">Grupo Médico</a></li>
+								<li><a href="/departamentos">Estética</a></li>
+								<li><a href="/departamentos">Atención al Paciente</a></li>
+								<li><a href="/departamentos">Administrativo</a></li>
+								<li><a href="/departamentos">Comercial</a></li>
+								<li><a href="/departamentos">Financiero</a></li>
+								<li><a href="/departamentos">Servicios Generales</a></li>
+							</ul>
+						</li>
+						<hr/>
+						<li class='dropper'>
+							<figure><i class='icon-circle-arrow-down'></i> Social &nbsp;›</figure>
+							<ul class='subSide'>
+								<li><a href="/actividad"><i class="icon-th-list"></i> Actividad</a></li>
+								<li><a href="/grupos"><i class="icon-group"></i> Grupos</a></li>
+								<li><a href="/miembros"><i class="icon-plus-sign-alt"></i> Miembros</a></li>
+								<li><a href="<?php echo bp_loggedin_user_domain() ?>"><i class='icon-user'></i> Mi Perfil</a></li>
+								<li><a href="<?php echo bp_loggedin_user_domain().'settings/'; ?>"><i class='icon-wrench'></i> Configuración</a></li>
+								<li><a href="<?php echo bp_loggedin_user_domain().'messages/'; ?>"><i class="icon-envelope-alt"></i> Mensajes &nbsp;&nbsp;<span class="badge badge-info"><!-- 10 --><?php bp_total_unread_messages_count() ?></span></a></li>
+							</ul>
+						</li>
+						<hr/>
+						<li><a href="/novedades"><figure><i class="icon-bullhorn"></i> Novedades</figure></a></li>
+						<li><a href="/galerias"><figure><i class="icon-picture"></i> Galerías</figure></a></li>
 						<hr/>
 						<li data-target='messages'><figure><i class="icon-cloud"></i> Aplicaciones</figure></li>
 						<hr/>
-						<li data-target='functions'><figure><i class="icon-envelope-alt"></i> Mensajes &nbsp;&nbsp;<span class="badge badge-info">10</span></figure></li>
+						
 						<!-- <li class='dropper'>
 							<figure><i class='icon-circle-arrow-down'></i> Tareas &nbsp;›</figure>
 							<ul class='subSide'>
@@ -162,8 +193,7 @@
 						</li> -->
 						<!-- <li data-target='charts'><figure><i class='icon-signal'></i> Charts</figure></li>
 						<hr/> -->
-						<li data-target='profile'><figure><i class='icon-user'></i> Mi Perfil</figure></li>
-						<li data-target='settings'><figure><i class='icon-wrench'></i> Configuración</figure></li>
+						
 						<hr/>
 						<li data-target='help'><figure><i class='icon-question-sign'></i> Ayuda</figure></li>
 					</ul>

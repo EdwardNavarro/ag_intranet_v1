@@ -1,13 +1,13 @@
 $(document).ready(function(){
-	// $(window).on("load",function(){
-	// 	$('#tasksSideList').collapse('hide');
-	// 	fixLayout();
-	// 	loadContent('settings');
-	// 	tasks.update();
-	// });
-	// $(window).on("resize",function(){
-	// 	fixLayout();
-	// });	
+	$(window).on("load",function(){
+		$('#tasksSideList').collapse('hide');
+		fixLayout();
+		//loadContent('settings');
+		tasks.update();
+	});
+	$(window).on("resize",function(){
+		fixLayout();
+	});	
 
 
 	//FLIP SIDEBAR ACTIVE
@@ -51,16 +51,16 @@ $(document).ready(function(){
 	$('.sideBar li').on("click",function(){
 		var dt = $(this).attr('data-target');
 		var pth = 'http://intranet.ag/wp-content/themes/ag_intranet_v1/';
-		$.ajax({
-			url:pth+'pages/'+dt+'.html',
-			cache:false,
-			success:function(data){
-				$('.content').empty();
-				$('.content').html(data);
-			}
-		}).done(function(d){
-			updateTooltips();
-		});
+		// $.ajax({
+		// 	url:pth+'pages/'+dt+'.html',
+		// 	cache:false,
+		// 	success:function(data){
+		// 		$('.content').empty();
+		// 		$('.content').html(data);
+		// 	}
+		// }).done(function(d){
+		// 	updateTooltips();
+		// });
 	});	
 
 
@@ -269,3 +269,43 @@ function getDocWidth() {
 /*----------- DUMMY OBJECTS -------------*/
 dummy = {};
 dummy.project = function () { return $("<tr/>").html("<td>__id__</td><td>__name__</td><td>__client__</td><td>__desc__</td><td><div class='btn-group sharp'><button class='btn btn-primary' rel='tooltip' title='Messages'><i class='icon-white icon-envelope'></i> __messages__</button><button class='btn btn-primary' rel='tooltip' title='Files'><i class='icon-white icon-file'></i> __files__</button><button class='btn btn-primary' rel='tooltip' title='Tasks'><i class='icon-white icon-edit'></i> __tasks__</button></div></td><td><div class='progress progress-success'><div class='bar' style='width:__completion__'></div></div></td>");}
+
+
+
+
+
+
+
+
+
+/*----------- IFRAME AUTO HEIGHT -------------*/
+function setIframeHeight( iframeId ) /** IMPORTANT: All framed documents *must* have a DOCTYPE applied **/
+{
+	var ifDoc, ifRef = document.getElementById( iframeId );
+
+	try
+	{   
+		ifDoc = ifRef.contentWindow.document.documentElement;  
+	}
+	catch( e )
+	{ 
+		try
+		{ 
+			ifDoc = ifRef.contentDocument.documentElement;  
+		}
+		catch(ee)
+		{   
+		}  
+	}
+
+	if( ifDoc )
+	{
+		ifRef.height = 1;  
+		ifRef.height = ifDoc.scrollHeight;
+
+		/* For width resize, enable below.  */
+
+// ifRef.width = 1;
+// ifRef.width = ifDoc.scrollWidth; 
+	}
+}

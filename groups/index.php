@@ -9,6 +9,16 @@
 
 get_header( 'buddypress' ); ?>
 
+	<section class='span10 content borBox'>
+		<div class='row-fluid'>
+			<div class='page-header'>
+				<h1><?php //the_title(); ?>Grupos</h1>
+			</div>
+		</div>
+		<!-- <br/> -->
+		<div class="row-fluid">
+			<div class="span9">
+
 	<?php do_action( 'bp_before_directory_groups_page' ); ?>
 
 	<div id="content">
@@ -87,5 +97,15 @@ get_header( 'buddypress' ); ?>
 
 	<?php do_action( 'bp_after_directory_groups_page' ); ?>
 
-<?php get_sidebar( 'buddypress' ); ?>
+			</div>
+			<div class="span3">
+				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-inicio-der') ) : ?> <?php endif; ?>
+			</div>
+		</div>
+
+</section>
+
+<?php //get_sidebar( 'buddypress' ); ?>
+
+
 <?php get_footer( 'buddypress' ); ?>

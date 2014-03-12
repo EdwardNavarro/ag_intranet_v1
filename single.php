@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 				
-				<!-- Inicia Pagina -->
+				<!-- Inicia Post/single -->
 				<section class='span10 content borBox'>
 					<div class='row-fluid'>
 						<div class='page-header'>
@@ -32,6 +32,6 @@
 						</div>
 					</div>
 				</section>
-				<!-- Termina Pagina -->
+				<!-- Termina Post/single -->
 
 <?php get_footer(); ?>

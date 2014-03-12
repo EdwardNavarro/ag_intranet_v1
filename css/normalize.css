@@ -70,6 +70,8 @@ html {
     -webkit-text-size-adjust: 100%; /* 2 */
     -ms-text-size-adjust: 100%; /* 2 */
 }
+
+html, body { min-height: 100%; }
  
 /*
  * Addresses `font-family` inconsistency between `textarea` and other form
@@ -291,7 +293,8 @@ dd {
 menu,
 ol,
 ul {
-    padding: 0 0 0 40px;
+    /*padding: 0 0 0 40px;*/
+    list-style: none;
 }
  
 /*

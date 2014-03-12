@@ -1,5 +1,15 @@
 <?php get_header( 'buddypress' ); ?>
 
+	<section class='span10 content borBox'>
+		<div class='row-fluid'>
+			<div class='page-header'>
+				<h1><?php //the_title(); ?>Actividad<!--  <small>for the important stuff</small> --></h1>
+			</div>
+		</div>
+		<!-- <br/> -->
+		<div class="row-fluid">
+			<div class="span9">
+
 <?php do_action( 'template_notices' ); ?>
 
 <div class="activity no-ajax" role="main">
@@ -15,5 +25,15 @@
 
 	<?php endif; ?>
 </div>
+
+
+			</div>
+			<div class="span3">
+				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-inicio-der') ) : ?> <?php endif; ?>
+			</div>
+		</div>
+
+</section>
+
 
 <?php get_footer( 'buddypress' ); ?>

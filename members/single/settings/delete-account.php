@@ -10,6 +10,16 @@
 
 <?php get_header( 'buddypress' ); ?>
 
+	<section class='span10 content borBox'>
+		<div class='row-fluid'>
+			<div class='page-header'>
+				<h1><?php //the_title(); ?>Perfil <small>Configuración > Eliminar Cuenta</small></h1>
+			</div>
+		</div>
+		<!-- <br/> -->
+		<div class="row-fluid">
+			<div class="span9">
+
 	<div id="content">
 		<div class="padder">
 
@@ -91,6 +101,16 @@
 		</div><!-- .padder -->
 	</div><!-- #content -->
 
-<?php get_sidebar( 'buddypress' ); ?>
+
+			</div>
+			<div class="span3">
+				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-inicio-der') ) : ?> <?php endif; ?>
+			</div>
+		</div>
+
+</section>
+
+
+<?php //get_sidebar( 'buddypress' ); ?>
 
 <?php get_footer( 'buddypress' ); ?>
